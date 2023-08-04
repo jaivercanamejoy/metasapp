@@ -1,6 +1,8 @@
+import './Pie.css'
+
 function Pie() {
     return (
-      <footer className="text-red-500">
+      <footer className="pie">
         <small>Desarrollado y diseñado por Jaiver Canamejoy. 2030. Todos los derechos reservados.</small>
       </footer>
     );
