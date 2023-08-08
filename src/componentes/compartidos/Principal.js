@@ -10,10 +10,10 @@ function Principal({children}) {
       <>
       <div className={estilos.principal}>
       <aside className={estilos.aside}>
-        <Vinculo href="/lista" 
+        <Vinculo to="/lista" 
         texto="Lista de Metas"
         Icon={ListaSVG} /> 
-          <Vinculo href="/lista" 
+          <Vinculo to="/nueva" 
           texto="Nueva Meta"
           Icon={NuevaSVG} /> 
       </aside>
