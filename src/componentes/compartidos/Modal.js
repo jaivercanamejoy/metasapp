@@ -1,16 +1,10 @@
-import { useParams } from "react-router-dom";
-import { Contexto } from "../../servicios/Memoria";
-import { useContext } from "react";
-import Detalles from "./nueva/Detalles";
-
-function Modal() {
-    const { id } = useParams();
-    const [estado, enviar] = useContext(Contexto);
+function Modal({children}) {
 
     return ( 
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-75">
-            {JSON.stringify(estado.objetos[id])}
-            <Detalles></Detalles>
+        <div className="flex items-center fixed inset-0 bg-gray-500 bg-opacity-75">
+            <div className='mx-auto'>
+            {children}
+            </div>
             </div>
      );
 }
