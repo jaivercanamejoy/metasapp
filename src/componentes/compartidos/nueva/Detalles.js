@@ -38,8 +38,8 @@ useEffect(() => {
 
 
 const crear = async () => {
-    const nuevaMeta = await crearMeta();
-    enviar({tipo: 'crear', meta:nuevaMeta});
+    const nuevaMeta = await crearMeta(form);
+    enviar({tipo: 'crear', meta : nuevaMeta});
     navegar('/lista');
 }
 
@@ -48,14 +48,14 @@ const cancelar = () => {
 }
 
 const actualizar = async () => {
-    const metaActualizada = await actualizarMeta();
+    const metaActualizada = await actualizarMeta(form);
     enviar({tipo: 'actualizar', meta: metaActualizada});
     navegar('/lista');
 }
 
 const borrar = async () => {
-    const idBorrada = await borrarMeta();
-    enviar({tipo: 'borrar', id: idBorrada});
+    await borrarMeta(form.id);
+    enviar({tipo: 'borrar', id: form.id});
     navegar('/lista');
 }
 
